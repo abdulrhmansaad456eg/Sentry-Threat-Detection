@@ -1,151 +1,94 @@
-🛡️ SENTRY v2.0
-Advanced Log Analysis & Threat Detection
+# 🛡️ SENTRY v2.0
+### **Advanced Log Analysis & Threat Detection**
 
-Sentry is a standalone defensive cybersecurity tool that performs automated log analysis, threat detection, and forensic reporting.
+Sentry is a standalone, **privacy-first** defensive cybersecurity tool designed for automated log analysis, threat detection, and forensic reporting. It parses raw system logs to uncover sophisticated attack patterns, classifies threats by severity, and generates professional forensic reports suitable for audits and incident response.
 
-It parses raw system and server logs to uncover sophisticated attack patterns, classifies threats by severity, and generates professional forensic reports suitable for audits, incident response, and security investigations.
 
-Built with a privacy first and offline first philosophy, Sentry runs entirely on the local machine with zero external dependencies or telemetry.
 
-🚀 Key Features
-🔍 Heuristic Detection Engine
+---
 
-Detects common and high impact attacks using advanced Regex pattern matching:
+## 🚀 Key Features
 
-SQL Injection (SQLi)
+### 🔍 Heuristic Detection Engine
+Detects common and high-impact attacks using advanced Regex pattern matching:
+* **SQL Injection (SQLi):** Malicious database query attempts.
+* **SSH Brute Force:** Repeated unauthorized access attempts.
+* **Path Traversal:** Directory climbing and sensitive file access.
 
-SSH Brute Force attempts
+### 🧠 Contextual Intelligence
+Each alert is enriched with actionable data:
+* **Risk Level:** Categorized from Low to Critical.
+* **Threat Explanation:** Why the pattern is dangerous.
+* **Raw Evidence:** Direct log lines for immediate validation.
 
-Path Traversal exploits
+### 📄 Forensic PDF Reporting
+Generate timestamped, tamper-evident reports including:
+* Threat summaries and severity classification.
+* Raw log evidence for chain-of-custody documentation.
 
-🧠 Contextual Intelligence
+### ⚡ Lightweight Architecture
+* **Standalone:** Single executable under 20MB.
+* **Portable:** No installation or Python environment needed.
+* **Offline:** Zero external dependencies or telemetry.
 
-Each alert includes:
+---
 
-Risk level
+## 🛠️ Technical Stack
 
-Clear explanation of the threat
+| Component | Technology |
+| :--- | :--- |
+| **Language** | Python 3.10+ |
+| **GUI** | Tkinter (Custom Dark Mode) |
+| **Detection Engine** | Regular Expressions (Regex) |
+| **PDF Engine** | ReportLab |
+| **Packaging** | PyInstaller & UPX |
 
-Why it is dangerous
+---
 
-Raw evidence lines from logs
+## 🧩 Use Cases
 
-🌙 Dark Theme UI
+* **Blue Team Triage:** Quickly filter noise during security incidents.
+* **Incident Response:** Generate audit-ready reports for stakeholders.
+* **SOC Training:** Ideal for cybersecurity students and lab exercises.
+* **Offline Audits:** Secure analysis for air-gapped systems.
 
-Custom styled Cyber Analyzer interface designed for:
+---
 
-High visibility
+## 🎯 Design Principles
 
-Long monitoring sessions
+> **Privacy First:** Fully offline operation. Logs never leave the local machine.  
+> **Transparency:** Detections are explainable and visible to the analyst.  
+> **Efficiency:** Designed for high visibility during long monitoring sessions via a Dark Theme UI.
 
-Reduced eye strain
+---
 
-📄 Forensic PDF Reporting
+## ⚠️ Limitations & Roadmap
 
-Generate timestamped, tamper evident reports that include:
+### Current Constraints
+* Regex-based detection may miss heavily obfuscated payloads.
+* Optimized for batch analysis (no real-time streaming yet).
+* Recommended for log files under 500MB.
 
-Threat summaries
+### Roadmap 🗺️
+- [ ] Real-time log streaming mode.
+- [ ] Additional detections (XSS, RCE, Malware signatures).
+- [ ] Risk score dashboard and visualization.
+- [ ] JSON and CSV export support.
+- [ ] YARA rule integration.
 
-Severity classification
+---
 
-Raw log evidence
+## 🔐 Privacy & Security
+Sentry respects user privacy by design. There are no cloud services, no external API calls, and zero data collection. All analysis happens strictly on the host machine.
 
-Chain of custody friendly format
+---
 
-⚡ Lightweight Architecture
+## 💻 Getting Started
+1. **Download** the latest `Sentry.exe` from the Releases page.
+2. **Run** the application (no admin rights required).
+3. **Upload** your `.log` or `.txt` file.
+4. **Analyze** and export your Forensic PDF Report.
 
-Standalone executable
+---
 
-No installation required
-
-No Python environment needed
-
-< 20MB compressed build
-
-Works offline
-
-🧰 Technical Stack
-Component	Technology
-Language	Python 3.10+
-GUI	Tkinter (Custom Dark Mode)
-Detection	Regular Expressions (Regex)
-PDF Engine	ReportLab
-Packaging	PyInstaller
-Compression	UPX
-🧩 Use Cases
-
-Sentry is designed for practical defensive security scenarios:
-
-Blue Team log triage
-
-Incident response investigations
-
-SOC training labs
-
-Student cybersecurity exercises
-
-Offline forensic audits
-
-Small business security monitoring
-
-🎯 Design Goals
-
-Sentry was built with the following principles:
-
-Fast offline analysis without internet dependency
-
-Privacy first with zero telemetry or data collection
-
-Transparent and explainable detections
-
-Lightweight and portable for field use
-
-Simple enough for students, powerful enough for professionals
-
-🔐 Privacy & Security
-
-Sentry respects user privacy by design:
-
-Fully offline operation
-
-No cloud services
-
-No telemetry
-
-No external API calls
-
-Logs never leave the local machine
-
-All analysis happens locally.
-
-⚠️ Limitations
-
-To remain lightweight and portable, Sentry currently has some constraints:
-
-Regex based detection may miss heavily obfuscated payloads
-
-Not a replacement for full SIEM or enterprise SOC platforms
-
-Designed primarily for small to medium log files (<500MB recommended)
-
-Batch analysis only (no real time monitoring yet)
-
-These tradeoffs keep the tool fast and dependency free.
-
-🗺️ Roadmap
-
-Planned improvements for future versions:
-
-Real time log streaming mode
-
-Additional detections (XSS, RCE, malware signatures)
-
-Risk score dashboard
-
-JSON and CSV export
-
-YARA rule support
-
-Plugin based detection engine
-
-Multi log correlation
+*Developed for the security community with a focus on privacy and portability.*
