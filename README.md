@@ -14,16 +14,6 @@
 
 ---
 
-## 📸 Screenshots
-
-> **Note to Reviewers:** The images below demonstrate the tool in action against a simulated compromised server log.
-
-| Security Dashboard | Forensic PDF Report |
-| :--- | :--- |
-| ![Interface](screenshots/interface.png) | ![PDF Report](screenshots/pdf_report.png) |
-
----
-
 ## 🛠️ Technical Stack
 
 * **Language:** Python 3.10+
@@ -43,19 +33,3 @@ You can test the tool's detection capabilities in under 60 seconds:
 3.  **Load Logs:** Click **"LOAD LOG FILE"** and select the provided sample file: `tests/compromised_log.txt`.
 4.  **Analyze:** Click **"START SECURITY SCAN"**. The terminal will highlight detected threats in green.
 5.  **Audit:** Click **"GENERATE PDF REPORT"** to see the professional forensic output.
-
----
-
-## 📂 Project Structure
-
-```text
-Sentry-Threat-Detection/
-├── src/
-│   └── sentry_scanner.py       # Main Source Code (Professor Review)
-├── dist/
-│   └── sentry_scanner.exe      # Compiled Windows Executable
-├── tests/
-│   └── compromised_log.txt     # Sample data for testing
-├── screenshots/                # Documentation images
-├── requirements.txt            # Project dependencies
-└── README.md                   # Project documentation
