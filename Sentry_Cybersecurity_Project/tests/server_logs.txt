@@ -1,0 +1,7 @@
+Feb 10 08:01:22 server sshd[123]: Failed password for root from 192.168.1.55 port 22 ssh2
+Feb 10 08:01:24 server sshd[123]: Failed password for root from 192.168.1.55 port 22 ssh2
+Feb 10 08:01:26 server sshd[123]: Failed password for root from 192.168.1.55 port 22 ssh2
+Feb 10 08:05:01 server sudo: user : TTY=pts/0 ; PWD=/home/user ; USER=root ; COMMAND=/usr/bin/sudo cat /etc/shadow
+Feb 10 08:10:45 server httpd: 192.168.1.55 - - [10/Feb/2026:08:10:45] "GET /login.php?user=admin' UNION SELECT 1,password FROM users-- HTTP/1.1" 200 
+Feb 10 08:12:00 server ftp: 10.0.0.5 downloaded malware_installer.exe
+Feb 10 08:15:30 server httpd: 192.168.1.55 "GET /../../etc/passwd HTTP/1.1" 403
