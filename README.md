@@ -1,0 +1,1 @@
+Project Portfolio: [https://github.com/abdulrhmansaad456eg/Sentry-Threat-Detection] – A standalone SIEM prototype for automated log analysis and forensic reporting, developed to demonstrate proficiency in Python-based security automation
