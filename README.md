@@ -24,11 +24,11 @@
 
 ---
 
-## 🧪 Testing Instructions (For GKS Reviewers)
+## 🧪 Testing Instructions (For Reviewers)
 
 You can test the tool's detection capabilities in under 60 seconds:
 
-1.  **Download:** Navigate to the `dist/` folder and download `sentry_scanner.exe` (or the `.zip` version).
+1.  **Download:** Navigate to the `dist/` folder and download `sentry_scanner.exe`.
 2.  **Launch:** Run the executable on a Windows machine (no installation required).
 3.  **Load Logs:** Click **"LOAD LOG FILE"** and select the provided sample file: `tests/compromised_log.txt`.
 4.  **Analyze:** Click **"START SECURITY SCAN"**. The terminal will highlight detected threats in green.
