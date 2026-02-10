@@ -1,35 +1,151 @@
-# 🛡️ SENTRY v2.0 | Advanced Log Analysis & Threat Detection
+🛡️ SENTRY v2.0
+Advanced Log Analysis & Threat Detection
 
-**Sentry** is a standalone cybersecurity tool designed to provide automated security monitoring and forensic reporting. It parses raw system logs to detect sophisticated attack patterns, classifies threats by risk level, and generates professional forensic reports for security audits.
+Sentry is a standalone defensive cybersecurity tool that performs automated log analysis, threat detection, and forensic reporting.
 
----
+It parses raw system and server logs to uncover sophisticated attack patterns, classifies threats by severity, and generates professional forensic reports suitable for audits, incident response, and security investigations.
 
-## 🚀 Key Features
+Built with a privacy first and offline first philosophy, Sentry runs entirely on the local machine with zero external dependencies or telemetry.
 
-* **Heuristic Detection Engine:** Identifies SQL Injection (SQLi), SSH Brute-Force, and Path Traversal attacks using advanced Regex pattern matching.
-* **Contextual Intelligence:** Provides detailed explanations for each detected threat, explaining *why* it is dangerous to the system.
-* **Dark-Theme UI:** Optimized "Cyber-Analyzer" interface built for high-visibility monitoring.
-* **Forensic PDF Generation:** Exports timestamped, tamper-evident security reports including raw evidence lines for chain-of-custody.
-* **Lightweight Architecture:** Zero-dependency standalone executable (<20MB) requiring no installation or Python environment.
+🚀 Key Features
+🔍 Heuristic Detection Engine
 
----
+Detects common and high impact attacks using advanced Regex pattern matching:
 
-## 🛠️ Technical Stack
+SQL Injection (SQLi)
 
-* **Language:** Python 3.10+
-* **GUI:** Tkinter (Custom Styled Dark Mode)
-* **PDF Engine:** ReportLab
-* **Analysis:** Regular Expressions (Regex)
-* **Build Tool:** PyInstaller with UPX compression
+SSH Brute Force attempts
 
----
+Path Traversal exploits
 
-## 🧪 Testing Instructions (For Reviewers)
+🧠 Contextual Intelligence
 
-You can test the tool's detection capabilities in under 60 seconds:
+Each alert includes:
 
-1.  **Download:** Navigate to the `dist/` folder and download `sentry_scanner.exe`.
-2.  **Launch:** Run the executable on a Windows machine (no installation required).
-3.  **Load Logs:** Click **"LOAD LOG FILE"** and select the provided sample file: `tests/compromised_log.txt`.
-4.  **Analyze:** Click **"START SECURITY SCAN"**. The terminal will highlight detected threats in green.
-5.  **Audit:** Click **"GENERATE PDF REPORT"** to see the professional forensic output.
+Risk level
+
+Clear explanation of the threat
+
+Why it is dangerous
+
+Raw evidence lines from logs
+
+🌙 Dark Theme UI
+
+Custom styled Cyber Analyzer interface designed for:
+
+High visibility
+
+Long monitoring sessions
+
+Reduced eye strain
+
+📄 Forensic PDF Reporting
+
+Generate timestamped, tamper evident reports that include:
+
+Threat summaries
+
+Severity classification
+
+Raw log evidence
+
+Chain of custody friendly format
+
+⚡ Lightweight Architecture
+
+Standalone executable
+
+No installation required
+
+No Python environment needed
+
+< 20MB compressed build
+
+Works offline
+
+🧰 Technical Stack
+Component	Technology
+Language	Python 3.10+
+GUI	Tkinter (Custom Dark Mode)
+Detection	Regular Expressions (Regex)
+PDF Engine	ReportLab
+Packaging	PyInstaller
+Compression	UPX
+🧩 Use Cases
+
+Sentry is designed for practical defensive security scenarios:
+
+Blue Team log triage
+
+Incident response investigations
+
+SOC training labs
+
+Student cybersecurity exercises
+
+Offline forensic audits
+
+Small business security monitoring
+
+🎯 Design Goals
+
+Sentry was built with the following principles:
+
+Fast offline analysis without internet dependency
+
+Privacy first with zero telemetry or data collection
+
+Transparent and explainable detections
+
+Lightweight and portable for field use
+
+Simple enough for students, powerful enough for professionals
+
+🔐 Privacy & Security
+
+Sentry respects user privacy by design:
+
+Fully offline operation
+
+No cloud services
+
+No telemetry
+
+No external API calls
+
+Logs never leave the local machine
+
+All analysis happens locally.
+
+⚠️ Limitations
+
+To remain lightweight and portable, Sentry currently has some constraints:
+
+Regex based detection may miss heavily obfuscated payloads
+
+Not a replacement for full SIEM or enterprise SOC platforms
+
+Designed primarily for small to medium log files (<500MB recommended)
+
+Batch analysis only (no real time monitoring yet)
+
+These tradeoffs keep the tool fast and dependency free.
+
+🗺️ Roadmap
+
+Planned improvements for future versions:
+
+Real time log streaming mode
+
+Additional detections (XSS, RCE, malware signatures)
+
+Risk score dashboard
+
+JSON and CSV export
+
+YARA rule support
+
+Plugin based detection engine
+
+Multi log correlation
